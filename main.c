@@ -1,62 +1,57 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
 {
-const float no1,no2;
-float ans;
-const char x;
-char io;
-int t=1;
+    printf("\n#############CALCULATOR#############\n\n\nAddition [+]\nSubtraction [-]\nMultiplication [*]\nDivision [/]\nPower [^]\n\n#This is a simple calculator to find above operations of any two numbers\n");
 
-do
-{
-printf("Do you want to continue [y/n]?\n");
-scanf("%c",&io);
+    int x;
+    char symbol;
+    float num1,num2,ans;
 
-if (io=='y')
-{
-printf("Enter your first value :");
-scanf("%f",&no1);
+    printf("Do you want to continue [y/n]\n");
+    scanf(" %c",&x);
 
-printf("Enter the function :");
-scanf(" %c",&x);
+        switch(x)
+    {
+    case 'y':
+        for (x=0;x<5;x++)
+            {printf("\nEnter your expression as follows \n\n[Number 1] [Function] [Number 2]\n\n");
+    scanf(" %f %c %f",&num1,&symbol,&num2);
 
-printf("Enter your second value :");
-scanf("%f",&no2);
-
-switch (x)
-{
+    switch (symbol)
+    {
     case '+':
-    ans=no1+no2;
-    break;
+        ans = num1 + num2;
+        break;
 
     case '-':
-    ans=no1-no2;
-    break;
+        ans = num1 - num2;
+        break;
 
     case '*':
-    ans=no1*no2;
-    break;
+        ans = num1 * num2;
+        break;
 
     case '/':
-    ans=no1/no2;
-    break;
+        ans = num1 / num2;
+        break;
 
     case '^':
-    ans=pow(no1,no2);
-    break;
+        ans = pow(num1,num2);
+        break;
 
     default:
-    printf("This function is currently not available\n");
-}
+        printf("\nSORRY THIS FUNCTION IS CURRENTLY NOT AVAILABLE\n");
+    }
 
-printf("\n%.3f\n\n",ans);
-t++;
-}
-else
-    return(0);
+    printf("\nAnswer = %.3f\n",ans);
+    }
+    break;
+    default:
+        exit(0);
+    }
 
-}while (t>0);
-return 0;
+    return 0;
 }
