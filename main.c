@@ -4,7 +4,7 @@
 
 int main()
 {
-    printf("\n#############CALCULATOR#############\n\n\nAddition [+]\nSubtraction [-]\nMultiplication [*]\nDivision [/]\nPower [^]\n\n#This is a simple calculator to find above operations of any two numbers\n");
+    printf("\n#############CALCULATOR#############\n\n\nAddition [+]\nSubtraction [-]\nMultiplication [*]\nDivision [/]\nPower [^]\nSquareroot[~]\n#This is a simple calculator to find above operations of any two numbers\n");
 
     int x;
     char symbol;
@@ -41,6 +41,10 @@ int main()
     case '^':
         ans = pow(num1,num2);
         break;
+            
+        case '~':
+            ans = sqrt(num1);
+            break;
 
     default:
         printf("\nSORRY THIS FUNCTION IS CURRENTLY NOT AVAILABLE\n");
